@@ -13,5 +13,5 @@ export function useToggle(initialValue = false, debounce = 0) {
     setValue((prev) => !prev);
   };
 
-  return [value, toggle];
+  return { value, toggle };
 }
