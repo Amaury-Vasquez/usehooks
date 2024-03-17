@@ -1,0 +1,25 @@
+{
+  "name": "usehooks",
+  "version": "0.0.1",
+  "description": "Custom hooks for react (typescript)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amaury-Vasquez/usehooks.git"
+  },
+  "keywords": [
+    "hooks",
+    "react",
+    "typescript",
+    "custom"
+  ],
+  "author": "amvasdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amaury-Vasquez/usehooks/issues"
+  },
+  "homepage": "https://github.com/Amaury-Vasquez/usehooks#readme"
+}
