@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 /**
  * React hook to toggle a boolean value
@@ -6,12 +6,14 @@ import { useState } from "react";
  * @param debounce debounce time in milliseconds
  * @returns [value, toggle]
  */
-export function useToggle(initialValue = false, debounce = 0) {
+export function useToggle(
+  initialValue = false
+): [boolean, () => void, Dispatch<SetStateAction<boolean>>] {
   const [value, setValue] = useState(initialValue);
 
   const toggle = () => {
     setValue((prev) => !prev);
   };
 
-  return { value, toggle };
+  return [value, toggle, setValue];
 }
