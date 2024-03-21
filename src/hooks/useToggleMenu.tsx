@@ -1,7 +1,5 @@
 import { RefObject, useState } from "react";
-// import { useOnClickOutside } from "usehooks-ts";
-
-const useOnClickOutside = (a: any, b: any) => {};
+import { useOnClickOutside } from "@/hooks";
 
 /**
  * React hook to toggle a menu panel

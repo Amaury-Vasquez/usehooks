@@ -4,3 +4,5 @@ export {
   CopiedText,
   CopyToClipboard,
 } from "./useCopyToClipboard";
+export { useOnClickOutside } from "./useOnClickOutside";
+export { useToggleMenu } from "./useToggleMenu";
