@@ -5,8 +5,8 @@ import { useOnClickOutside } from "@/hooks";
  * React hook to toggle a menu panel
  * @param ref React reference to the panel
  * @param initialIsOpen initial value of the boolean
- * @param timeout debounce time in milliseconds
- * @returns {isPanelOpen, togglePanel, isPanelClosing}
+ * @param timeout debounce time in milliseconds, default 200ms
+ * @returns {isPanelOpen, togglePanel, isPanelClosing, showMenu}
  */
 
 export function useToggleMenu<T extends HTMLElement = HTMLElement>(
@@ -41,5 +41,10 @@ export function useToggleMenu<T extends HTMLElement = HTMLElement>(
 
   useOnClickOutside(ref, closePanel);
 
-  return { isPanelOpen, togglePanel, isPanelClosing };
+  return {
+    showMenu: isPanelOpen || isPanelClosing,
+    isPanelOpen,
+    togglePanel,
+    isPanelClosing,
+  };
 }
