@@ -1,5 +1,4 @@
 import { RefObject, useCallback, useState } from "react";
-import { useOnClickOutside } from "@/hooks";
 
 /**
  * React hook to toggle a menu panel
@@ -9,11 +8,7 @@ import { useOnClickOutside } from "@/hooks";
  * @returns {isPanelOpen, togglePanel, isPanelClosing, showMenu}
  */
 
-export function useToggleMenu<T extends HTMLElement = HTMLElement>(
-  ref: RefObject<T>,
-  initialIsOpen = false,
-  timeout = 200
-) {
+export function useToggleMenu(initialIsOpen = false, timeout = 200) {
   const [isPanelOpen, setIsPanelOpen] = useState(initialIsOpen);
   const [isPanelClosing, setIsPanelClosing] = useState(false);
 
@@ -44,8 +39,6 @@ export function useToggleMenu<T extends HTMLElement = HTMLElement>(
       openPanel();
     }
   }, [isPanelOpen, openPanel, closePanel]);
-
-  useOnClickOutside(ref, closePanel);
 
   return {
     showMenu: isPanelOpen || isPanelClosing,
