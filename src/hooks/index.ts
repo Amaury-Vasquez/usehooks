@@ -6,3 +6,4 @@ export {
 } from "./useCopyToClipboard";
 export { useOnClickOutside } from "./useOnClickOutside";
 export { useToggleMenu } from "./useToggleMenu";
+export { useModal } from "./useModal";
